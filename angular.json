@@ -116,9 +116,16 @@
               "devServerTarget": "loginApp:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "loginApp"
+  "defaultProject": "loginApp",
+  "cli": {
+    "analytics": false
+  }
 }

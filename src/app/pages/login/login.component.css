@@ -1,0 +1,50 @@
+.paper {
+    background-color: white;
+    min-width: 320px;
+    min-height: 200px;
+    border-radius: 4px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+.title {
+    text-align: center;
+    padding: 8px;
+    font-weight: bold;
+}
+.bottom {
+    padding-bottom: 8px;
+    padding-right:8px
+}
+
+input {
+    width: 100%;
+    height: 24px;
+}
+
+.mainButton {
+    width: 100%;
+}
+
+.mainButton:hover {
+    cursor: pointer;
+}
+
+.secondButton {
+    border:none;
+    background: none;
+    text-align: left;
+}
+
+.bottomButtom {
+    padding-bottom: 8px;
+}

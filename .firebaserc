@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-application-3f1f4": {
+      "hosting": {
+        "loginApp": [
+          "test-application-3f1f4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-application-3f1f4"
+  }
+}

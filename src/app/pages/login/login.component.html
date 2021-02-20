@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="paper">
+        <div class="title">Login</div>
+        <div class="title"> {{message}} </div>
+        <div class="main">
+
+            <label>Email</label>
+            <form [formGroup]='loginFormGroup'>
+                <div class="bottom">
+                    <input type="email" formControlName={{email}} (ngModelChange)='onChange()'/>
+                </div>
+
+                <label>Password</label>
+                <div class="bottom">
+                    <input type="password"  formControlName={{password}} (ngModelChange)='onChange()'/>
+                </div>
+            </form>
+            <div class="bottomButton">
+                <button class="mainButton" (click)='login()' [disabled]='!isValid'>Login</button>
+            </div>
+            <a routerLink='/register'>
+                <button class="secondButton">Go to Register</button>
+            </a>
+        </div>
+    </div>
+</div>
