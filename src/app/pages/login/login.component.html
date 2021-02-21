@@ -4,7 +4,7 @@
         <div class="title"> {{message}} </div>
         <div class="main">
 
-            <label>Email</label>
+            <!-- <label>Email</label>
             <form [formGroup]='loginFormGroup'>
                 <div class="bottom">
                     <input type="email" formControlName={{email}} (ngModelChange)='onChange()'/>
@@ -17,7 +17,13 @@
             </form>
             <div class="bottomButton">
                 <button class="mainButton" (click)='login()' [disabled]='!isValid'>Login</button>
-            </div>
+            </div>-->
+
+            <button mat-raised-button color="primary" (click)='loginWithGoogle()'>Login with Google</button> 
+
+            <!-- <button mat-button color="accent" (click)='logout()'>Login out</button> -->
+
+
             <a routerLink='/register'>
                 <button class="secondButton">Go to Register</button>
             </a>

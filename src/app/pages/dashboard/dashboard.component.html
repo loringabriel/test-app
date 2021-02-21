@@ -1,1 +1,33 @@
-<p>Dashboard</p>
+
+<div *ngIf='isLogged'>
+    <p>Dashboard</p>
+    <p>Logged user email is: {{userEmail}}</p>
+    <button mat-raised-button color="primary" (click)='logout()'>Log out</button>
+    <div>
+        <form class="example-form" [formGroup]='noteFormGroup'>
+            <mat-form-field class="example-full-width">
+              <mat-label>New note</mat-label>
+              <input matInput placeholder="Add new note" formControlName='note'>
+            </mat-form-field>
+        </form>
+    </div>
+    <div>
+        <button mat-button color="primary" (click)='createNote()'>Add Note</button>
+    </div>
+   
+
+    <div *ngFor='let note of notes'>
+        <!-- <h3 *ngFor='let note of notes'>{{note.description}}</h3> -->
+        <mat-checkbox class="example-margin"
+                  [checked]="note.completed"
+                  color="primary"
+                  (change)="updateStatus($event.checked, note.id)">
+      {{note.description}}
+    </mat-checkbox>
+    <button mat-button color="primary" (click)='deleteNote(note.id)'>Delete</button>
+    </div>
+</div>
+<div *ngIf='loading'>
+    <mat-spinner color='secondary'></mat-spinner>
+</div>
+
